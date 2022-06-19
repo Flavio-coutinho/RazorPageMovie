@@ -7,11 +7,11 @@ using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.EntityFrameworkCore;
 using RazorPagesMovie.Models;
 
-namespace RazorPagesMovie.Pages_Movies
+namespace RazorPagesMovie.Pages.Movies
 {
 
-    #pragma warning disable CS8618
-    #pragma warning disable CS8614
+#pragma warning disable CS8618
+#pragma warning disable CS8614
     public class IndexModel : PageModel
     {
         private readonly RazorPagesMovieContext _context;
@@ -21,15 +21,15 @@ namespace RazorPagesMovie.Pages_Movies
             _context = context;
         }
 
-        public IList<Movie> Movie { get;set; } = default!;
+        public IList<Movie> Movie { get; set; } = default!;
 
         public async Task OnGetAsync()
         {
-            
-                Movie = await _context.Movie.ToListAsync();
-            
+
+            Movie = await _context.Movie.ToListAsync();
+
         }
     }
-    #pragma warning restore CS8618
-    #pragma warning restore CS8614
+#pragma warning restore CS8618
+#pragma warning restore CS8614
 }

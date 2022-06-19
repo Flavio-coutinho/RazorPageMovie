@@ -27,10 +27,9 @@ namespace RazorPagesMovie.Pages_Movies
         public Movie Movie { get; set; } = default!;
         
 
-        // To protect from overposting attacks, see https://aka.ms/RazorPagesCRUD
         public async Task<IActionResult> OnPostAsync()
         {
-          if (!ModelState.IsValid || _context.Movie == null || Movie == null)
+          if (!ModelState.IsValid)
             {
                 return Page();
             }
