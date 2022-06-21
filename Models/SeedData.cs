@@ -15,10 +15,10 @@ namespace RazorPagesMovie.Models
                         throw new ArgumentNullException("Null context or contextMovie");
                     }
 
-                    if (context.Movie.Any())
-                    {
-                        return;
-                    }
+                    // if (context.Movie.Any())
+                    // {
+                    //     return;
+                    // }
 
                     context.Movie.AddRange(
                         new Movie
