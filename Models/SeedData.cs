@@ -27,6 +27,7 @@ namespace RazorPagesMovie.Models
                             ReleaseDate = DateTime.Parse("2022-06-03"),
                             Genre = "Action",
                             Price = 9.99M,
+                            Rating = "R"
                         },
 
                         new Movie 
@@ -35,6 +36,7 @@ namespace RazorPagesMovie.Models
                             ReleaseDate = DateTime.Parse("2022-06-1"),
                             Genre = "Drama",
                             Price = 10.99M,
+                            Rating = "R"
                         },
 
                         new Movie
@@ -43,6 +45,7 @@ namespace RazorPagesMovie.Models
                             ReleaseDate = DateTime.Parse("2022-05-15"),
                             Genre = "Action",
                             Price = 15.99M,
+                            Rating = "R"
                         },
 
                           new Movie
@@ -51,6 +54,7 @@ namespace RazorPagesMovie.Models
                             ReleaseDate = DateTime.Parse("2022-04-15"),
                             Genre = "Suspense",
                             Price = 7.99M,
+                            Rating = "R"
                         }
                     );
                     context.SaveChanges();
