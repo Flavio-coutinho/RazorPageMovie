@@ -1,3 +1,5 @@
+using Microsoft.EntityFrameworkCore;
+
 namespace RazorPagesMovie.Models
 {
     public class SeedData
@@ -5,9 +7,10 @@ namespace RazorPagesMovie.Models
         public static void Initialize(IServiceProvider serviceProvider)
         {
             using (var context = new RazorPagesMovieContext(
-                serviceProvider.GetRequiredService<DbContextOptions<RazorPagesMovieContext>>()))
+                serviceProvider.GetRequiredService<
+                DbContextOptions<RazorPagesMovieContext>>()))
                 {
-                    if (context == null || contextMovie == null)
+                    if (context == null || context.Movie == null)
                     {
                         throw new ArgumentNullException("Null context or contextMovie");
                     }
@@ -21,7 +24,7 @@ namespace RazorPagesMovie.Models
                         new Movie
                         {
                             Title = "Interceptor",
-                            ReleasDate = DateTime.Parse("2022-06-03"),
+                            ReleaseDate = DateTime.Parse("2022-06-03"),
                             Genre = "Action",
                             Price = 9.99M,
                         },
@@ -39,15 +42,15 @@ namespace RazorPagesMovie.Models
                             Title = "Spiderhead",
                             ReleaseDate = DateTime.Parse("2022-05-15"),
                             Genre = "Action",
-                            Price = 15,99M,
-                        }
+                            Price = 15.99M,
+                        },
 
                           new Movie
                         {
                             Title = "365 Days",
                             ReleaseDate = DateTime.Parse("2022-04-15"),
                             Genre = "Suspense",
-                            Price = 7,99M,
+                            Price = 7.99M,
                         }
                     );
                     context.SaveChanges();
